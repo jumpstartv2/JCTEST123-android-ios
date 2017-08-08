@@ -1,0 +1,20 @@
+PODS:
+  - HockeySDK (4.1.6):
+    - HockeySDK/DefaultLib (= 4.1.6)
+  - HockeySDK/DefaultLib (4.1.6)
+  - IQKeyboardManager (4.0.11)
+  - JSONModel (1.7.0)
+
+DEPENDENCIES:
+  - HockeySDK (~> 4.1)
+  - IQKeyboardManager (~> 4.0)
+  - JSONModel (~> 1.7)
+
+SPEC CHECKSUMS:
+  HockeySDK: 95db557d54489a570dcdefae0d02f98eecc279a3
+  IQKeyboardManager: 83eae5318483a34eb2069ef413d195b97605232e
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+
+PODFILE CHECKSUM: 800233a5dc08edab199b0dbca48d61a574847920
+
+COCOAPODS: 1.0.1
