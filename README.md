@@ -21,7 +21,7 @@ To be able to utilize this template, you would need to clone this repository to 
 
 After cloning this template, you need to update you Bundle ID to conform to your project specifications. Also, add your preferred prefix to the Project settings so that files created afterwards will be distinct based on the prefix of choice. 
 
-Renaming the project itself is advised to conform with your project name, but doing so will affect the project as a whole. Implications such as needing to add all of the associated files to the project again, connecting it back to Xcode project, among other issues is to be expected. Template files need not to be renamed.
+Renaming the project itself is advised to conform with your project name, but doing so will affect the project as a whole. Implications such as needing to add all of the associated files to the project again, connecting it back to Xcode project, among other issues is to be expected. Template files need not to be renamed. Luckily, Xcode can handle project name change, covering most, if not all of the important project files, and updating the configuration of the project to cater the change. Follow the instructions in the [link](http://help.apple.com/xcode/mac/8.0/#/dev3db3afe4f) to get started. 
 
 Template files for `UIViewController` and `UITableViewCell` are also provided. This should be used as a superclass for your subsequent `UIViewController` and `UITableViewCell` instances for it already has methods and attributes needed for its usage.
 
