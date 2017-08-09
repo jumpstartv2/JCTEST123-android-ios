@@ -14,9 +14,16 @@ The following are the configurations already handled within the project:
 * Push Notifications setup
 * Project Directory and File Directory structure already prepared
 * Fastlane
+* Template files for `UIViewController` and `UITableViewCell`
 
-##### Update project template #####
-After cloning this template, you need to update you Bundle ID to conform to your project specifications. Also, add your preferred prefix to the Project settings so that files created afterwards will be distinct based on the prefix of choice. Renaming the project itself is advised, but take note, doing so will affect the project as a whole. Implications such as needing to add all of the associated files to the project again is to be expected.
+##### Usage #####
+To be able to utilize this template, you would need to clone this repository to your preferred directory. Building the project should produce no errors.
+
+After cloning this template, you need to update you Bundle ID to conform to your project specifications. Also, add your preferred prefix to the Project settings so that files created afterwards will be distinct based on the prefix of choice. 
+
+Renaming the project itself is advised to conform with your project name, but doing so will affect the project as a whole. Implications such as needing to add all of the associated files to the project again, connecting it back to Xcode project, among other issues is to be expected. Template files need not to be renamed.
+
+Template files for `UIViewController` and `UITableViewCell` are also provided. This should be used as a superclass for your subsequent `UIViewController` and `UITableViewCell` instances for it already has methods and attributes needed for its usage.
 
 ##### Dependencies #####
 Here are some of the dependencies you need to cater to be able to fully use the project template:
