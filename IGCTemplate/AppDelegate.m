@@ -25,6 +25,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [IGCUtils setupGlobalUIAdditions];
+    
+    // Third-party libraries setup
     [self setupHockeyApp];
     
 #if !(TARGET_OS_SIMULATOR)

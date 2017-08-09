@@ -67,5 +67,9 @@
  * @return List of NSManagedObject instances
  */
 + (NSArray *)fetchRecordsForEntity:(NSString *)entityName details:(NSDictionary *)detailDict;
+/*!
+ * @discussion Wherein all additional UI changes is to be implemented
+ */
++ (void)setupGlobalUIAdditions;
 
 @end

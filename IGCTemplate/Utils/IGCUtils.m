@@ -88,4 +88,9 @@
 
 #pragma mark - App-wide Helper Method
 
++ (void)setupGlobalUIAdditions {
+    // TODO Implementation for all UI additions that reflects globally
+    //      e.g. When using the `appearance` attribute of a UIObject
+}
+
 @end

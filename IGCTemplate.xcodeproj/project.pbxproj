@@ -19,6 +19,7 @@
 		A9B9E17F1F397DB600981458 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9E17C1F397DB600981458 /* main.m */; };
 		A9B9E1831F398A1D00981458 /* IGCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9E1821F398A1D00981458 /* IGCUtils.m */; };
 		A9B9E1861F398D1000981458 /* IGCConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9E1851F398D1000981458 /* IGCConstants.m */; };
+		A9C2A7FF1F3ABC600024DA58 /* IGCTemplateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C2A7FE1F3ABC600024DA58 /* IGCTemplateTableViewCell.m */; };
 		C826D30442EEC8540E61B8C3 /* libPods-BasePods-IGCTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3685CAC482C4ABC1583A5884 /* libPods-BasePods-IGCTemplate.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,8 @@
 		A9B9E1821F398A1D00981458 /* IGCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCUtils.m; sourceTree = "<group>"; };
 		A9B9E1841F398AA700981458 /* IGCConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGCConstants.h; sourceTree = "<group>"; };
 		A9B9E1851F398D1000981458 /* IGCConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCConstants.m; sourceTree = "<group>"; };
+		A9C2A7FD1F3ABC600024DA58 /* IGCTemplateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCTemplateTableViewCell.h; sourceTree = "<group>"; };
+		A9C2A7FE1F3ABC600024DA58 /* IGCTemplateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCTemplateTableViewCell.m; sourceTree = "<group>"; };
 		B434241DD17287536C8CF8E2 /* libPods-BasePods-IGCTemplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasePods-IGCTemplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46F9F16E001AE576C774EC4 /* Pods-BasePods-IGCTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-IGCTemplate.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-IGCTemplate/Pods-BasePods-IGCTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		FD4CEEC7F4405B4B2C34973D /* Pods-BasePods-IGCTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-IGCTemplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-IGCTemplate/Pods-BasePods-IGCTemplate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 		A96C86911F3992B10092BDFC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A9C2A7FD1F3ABC600024DA58 /* IGCTemplateTableViewCell.h */,
+				A9C2A7FE1F3ABC600024DA58 /* IGCTemplateTableViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 				A9B9E1861F398D1000981458 /* IGCConstants.m in Sources */,
 				A9B9E1461F397CA500981458 /* AppDelegate.m in Sources */,
 				A9B9E1831F398A1D00981458 /* IGCUtils.m in Sources */,
+				A9C2A7FF1F3ABC600024DA58 /* IGCTemplateTableViewCell.m in Sources */,
 				A9B9E17F1F397DB600981458 /* main.m in Sources */,
 				A9B9E17D1F397DB600981458 /* IGCTemplate.xcdatamodeld in Sources */,
 			);
