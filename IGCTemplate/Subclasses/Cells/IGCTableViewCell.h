@@ -1,5 +1,5 @@
 //
-//  IGCTemplateTableViewCell.h
+//  IGCTableViewCell.h
 //  IGCTemplate
 //
 //  Created by Jason Jon E. Carreos on 09/08/2017.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IGCTemplateTableViewCell : UITableViewCell
+@interface IGCTableViewCell : UITableViewCell
 
 + (NSString *)identifier;
 - (void)configure:(id)object atIndexPath:(NSIndexPath *)indexPath;

@@ -1,21 +1,28 @@
 //
-//  IGCTemplateTableViewCell.m
+//  IGCTableViewCell.m
 //  IGCTemplate
 //
 //  Created by Jason Jon E. Carreos on 09/08/2017.
 //  Copyright © 2017 Ingenuity Global Consulting. All rights reserved.
 //
 
-#import "IGCTemplateTableViewCell.h"
+#import "IGCTableViewCell.h"
 
-@implementation IGCTemplateTableViewCell
+#pragma mark - Private Constants
 
-+ (NSString *)identifier {
-    // NOTE Implementation is per subclass.
-    //      Should return the identifier indicated in cell's corresponding XIB file
-    
-    return nil;
-}
+// NOTE Put your private constants here
+
+#pragma mark - Class Extension
+
+@interface IGCTableViewCell ()
+
+// NOTE Put your attributes here
+
+@end
+
+@implementation IGCTableViewCell
+
+#pragma mark - Lifecycle
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -27,6 +34,15 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+#pragma mark - Public Methods
+
++ (NSString *)identifier {
+    // NOTE Implementation is per subclass.
+    //      Should return the identifier indicated in cell's corresponding XIB file
+    
+    return nil;
 }
 
 - (void)configure:(id)object atIndexPath:(NSIndexPath *)indexPath {
