@@ -88,6 +88,15 @@
 
 #pragma mark - App-wide Helper Method
 
++ (NSDictionary *)dictionaryFromJSONFile:(NSString *)filename {
+    NSString *path = [[NSBundle mainBundle] pathForResource:filename ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    
+    return (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data
+                                                           options:kNilOptions
+                                                             error:nil];
+}
+
 + (void)setupGlobalUIAdditions {
     // TODO Implementation for all UI additions that reflects globally
     //      e.g. When using the `appearance` attribute of a UIObject

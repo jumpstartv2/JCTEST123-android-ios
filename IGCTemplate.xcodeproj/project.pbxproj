@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5AC44D93B77BE2B75E573034 /* libPods-BasePods-IGCTemplateUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E17F8306717D579E0729E9F /* libPods-BasePods-IGCTemplateUITests.a */; };
 		5E7B2D0DEC88058C4373C8DF /* libPods-BasePods-IGCTemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B434241DD17287536C8CF8E2 /* libPods-BasePods-IGCTemplateTests.a */; };
+		A90BFB371F5E4CCA00AD0D60 /* IGCAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A90BFB361F5E4CCA00AD0D60 /* IGCAPIClient.m */; };
 		A954DDE81F3AD06800C391AA /* IGCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A954DDE71F3AD06800C391AA /* IGCViewController.m */; };
 		A9B9E1461F397CA500981458 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9E1451F397CA500981458 /* AppDelegate.m */; };
 		A9B9E14C1F397CA500981458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B9E14A1F397CA500981458 /* Main.storyboard */; };
@@ -48,6 +49,8 @@
 		3740603CC5092F38E9F8F19B /* Pods-BasePods-IGCTemplateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-IGCTemplateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-IGCTemplateUITests/Pods-BasePods-IGCTemplateUITests.release.xcconfig"; sourceTree = "<group>"; };
 		480DD4A5BE14A0E0A61698C2 /* Pods-BasePods-IGCTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-IGCTemplateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-IGCTemplateTests/Pods-BasePods-IGCTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C7AF00B6E68A68C1D5633FD /* Pods-BasePods-IGCTemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasePods-IGCTemplateTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasePods-IGCTemplateTests/Pods-BasePods-IGCTemplateTests.release.xcconfig"; sourceTree = "<group>"; };
+		A90BFB351F5E4CCA00AD0D60 /* IGCAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCAPIClient.h; sourceTree = "<group>"; };
+		A90BFB361F5E4CCA00AD0D60 /* IGCAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCAPIClient.m; sourceTree = "<group>"; };
 		A954DDE61F3AD06800C391AA /* IGCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCViewController.h; sourceTree = "<group>"; };
 		A954DDE71F3AD06800C391AA /* IGCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCViewController.m; sourceTree = "<group>"; };
 		A96C868E1F398E600092BDFC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -118,6 +121,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A90BFB321F5E4C8000AD0D60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A90BFB331F5E4C9400AD0D60 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		A90BFB341F5E4CA900AD0D60 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A90BFB351F5E4CCA00AD0D60 /* IGCAPIClient.h */,
+				A90BFB361F5E4CCA00AD0D60 /* IGCAPIClient.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		A954DDE51F3AD05200C391AA /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				A96C86911F3992B10092BDFC /* Cells */,
+				A90BFB331F5E4C9400AD0D60 /* Objects */,
 				A96C86921F3992B10092BDFC /* Views */,
 			);
 			path = Subclasses;
@@ -188,8 +215,10 @@
 				A9B9E1441F397CA500981458 /* AppDelegate.h */,
 				A9B9E1451F397CA500981458 /* AppDelegate.m */,
 				A9B9E1501F397CA500981458 /* Assets.xcassets */,
+				A90BFB341F5E4CA900AD0D60 /* API */,
 				A96C86931F3992C40092BDFC /* Controllers */,
 				A9B9E1771F397D7100981458 /* Layouts */,
+				A90BFB321F5E4C8000AD0D60 /* Models */,
 				A96C86901F3992B10092BDFC /* Subclasses */,
 				A9B9E1781F397DB600981458 /* Supporting Files */,
 				A9B9E1801F3989A500981458 /* Utils */,
@@ -536,6 +565,7 @@
 				A9B9E1461F397CA500981458 /* AppDelegate.m in Sources */,
 				A9B9E1831F398A1D00981458 /* IGCUtils.m in Sources */,
 				A9C2A7FF1F3ABC600024DA58 /* IGCTableViewCell.m in Sources */,
+				A90BFB371F5E4CCA00AD0D60 /* IGCAPIClient.m in Sources */,
 				A9B9E17F1F397DB600981458 /* main.m in Sources */,
 				A9B9E17D1F397DB600981458 /* IGCTemplate.xcdatamodeld in Sources */,
 			);

@@ -14,4 +14,5 @@ NSString * const kIGCHockeyAppIDInfoPlistKey = @"IGCHockeyAppID";
 
 #pragma mark - User Default keys
 
+NSString * const kIGCAuthInstanceUserDefaultsKey = @"AuthInstanceUserDefaultsKey";
 NSString * const kIGCDeviceTokenUserDefaultsKey = @"DeviceTokenUserDefaultsKey";

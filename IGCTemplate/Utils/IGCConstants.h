@@ -67,4 +67,5 @@ extern NSString * const kIGCHockeyAppIDInfoPlistKey;
 
 #pragma mark - User Default keys
 
+extern NSString * const kIGCAuthInstanceUserDefaultsKey;
 extern NSString * const kIGCDeviceTokenUserDefaultsKey;

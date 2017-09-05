@@ -7,6 +7,7 @@
 //
 
 #import <HockeySDK/HockeySDK.h>
+#import <IQKeyboardManager/IQKeyboardManager.h>
 
 #import "AppDelegate.h"
 
@@ -29,6 +30,7 @@
     
     // Third-party libraries setup
     [self setupHockeyApp];
+    [self setupIQKeyboardManager];
     
 #if !(TARGET_OS_SIMULATOR)
     if (SYSTEM_VERSION_GREATERTHAN_OR_EQUALTO(@"10.0")) {
@@ -319,6 +321,16 @@
     [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:identifier];
     [[BITHockeyManager sharedHockeyManager].crashManager setCrashManagerStatus:BITCrashManagerStatusAutoSend];
     [[BITHockeyManager sharedHockeyManager] startManager];
+}
+
+- (void)setupIQKeyboardManager {
+    IQKeyboardManager *keyboardManager;
+    
+    keyboardManager = [IQKeyboardManager sharedManager];
+    keyboardManager.enable = YES;
+    keyboardManager.enableAutoToolbar = NO;
+    keyboardManager.keyboardDistanceFromTextField = 10;
+    keyboardManager.shouldResignOnTouchOutside = YES;
 }
 
 - (void)translateNotificationContentToUI:(NSDictionary *)userInfo {
