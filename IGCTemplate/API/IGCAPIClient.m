@@ -31,7 +31,7 @@
     
     self.apiKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"IGCAPIKey"];
     self.authHeader = nil;  // TODO From custom OAuth instance object
-    self.rootURL = @"http://davaoicon.com/api/v1";
+    self.rootURL = @"";
     
     return self;
 }
