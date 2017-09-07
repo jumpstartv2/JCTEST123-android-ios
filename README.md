@@ -11,13 +11,14 @@ The following are the configurations already handled within the project:
 * IQKeyboardManager
 * JSONModel
 * Constants and Util files
+* API client
 * Push Notifications setup
 * Project Directory and File Directory structure already prepared
 * Fastlane
 * Template files for `UIViewController` and `UITableViewCell`
 
 ##### Usage #####
-To be able to utilize this template, you would need to clone this repository to your preferred directory. Building the project should produce no errors.
+To be able to utilize this template, you would need to clone this repository to your preferred project directory. Building the project should produce no errors.
 
 After cloning this template, you need to update you Bundle ID to conform to your project specifications. Also, add your preferred prefix to the Project settings so that files created afterwards will be distinct based on the prefix of choice. 
 
