@@ -15,12 +15,13 @@
 @property (nonatomic, strong) NSString *apiKey;
 @property (nonatomic, strong) NSString *authHeader;
 @property (nonatomic, strong) NSString *rootURL;
+@property (nonatomic, strong) NSURLSession *session;
 
 @end
 
 @implementation IGCAPIClient
 
-#pragma mark - Public Methods
+#pragma mark - Lifecycle
 
 - (instancetype)init {
     self = [super init];
@@ -32,6 +33,7 @@
     self.apiKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"IGCAPIKey"];
     self.authHeader = nil;  // TODO From custom OAuth instance object
     self.rootURL = @"";
+    self.session = [NSURLSession sharedSession];
     
     return self;
 }
@@ -46,15 +48,28 @@
     self.apiKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"XDSAPIKey"];
     self.authHeader = authHeader;
     self.rootURL = rootURL;
+    self.session = [NSURLSession sharedSession];
     
     return self;
 }
 
+#pragma mark - Public Methods
+
+- (void)cancelTasks {
+    [self.session getAllTasksWithCompletionHandler:^(NSArray<__kindof NSURLSessionTask *> * _Nonnull tasks) {
+        for (NSURLSessionTask *task in tasks) {
+            [task cancel];
+        }
+    }];
+}
+
 - (void)getRequestToLink:(NSString *)link
+             queryParams:(NSDictionary *)queryParams
            authenticated:(BOOL)authenticated
               completion:(void (^)(NSURLResponse *, NSDictionary *, NSError *))completion {
     NSURLRequest *request = [self requestFor:link
                                       method:kIGCAPIHTTPMethodGet
+                                 queryParams:queryParams
                                authenticated:authenticated];
     
     [self performAuthenticatedTask:authenticated
@@ -62,13 +77,29 @@
                         completion:completion];
 }
 
+- (void)postRequestToLink:(NSString *)link
+               bodyParams:(NSDictionary *)bodyParams
+            authenticated:(BOOL)authenticated
+               completion:(void (^)(NSURLResponse *, NSDictionary *, NSError *))completion {
+    NSURLRequest *request = [self requestFor:link
+                                      method:kIGCAPIHTTPMethodPost
+                                  bodyParams:bodyParams
+                               authenticated:authenticated];
+    
+    [self performAuthenticatedTask:authenticated
+                       withRequest:[request mutableCopy]
+                        completion:completion];
+}
+
+#pragma mark - Private Methods
+
 - (void)performAuthenticatedTask:(BOOL)isAuthenticated
                      withRequest:(NSMutableURLRequest *)request
                       completion:(void (^)(NSURLResponse *, NSDictionary *, NSError *))completion {
-    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request
-                                                                 completionHandler:^(NSData * _Nullable data,
-                                                                                     NSURLResponse * _Nullable response,
-                                                                                     NSError * _Nullable error) {
+    NSURLSessionDataTask *task = [self.session dataTaskWithRequest:request
+                                                 completionHandler:^(NSData * _Nullable data,
+                                                                     NSURLResponse * _Nullable response,
+                                                                     NSError * _Nullable error) {
         NSDictionary *responseDict;
         
         if (error) {
@@ -80,6 +111,7 @@
                                                          error:nil];
         
         completion(response, responseDict, error);
+        
     }];
     
     [task resume];
@@ -162,8 +194,6 @@
     
     return request;
 }
-
-#pragma mark - Private Methods
 
 - (NSURL *)url:(NSString *)url queryParameters:(NSDictionary *)params {
     NSMutableArray *queryItems = [NSMutableArray array];

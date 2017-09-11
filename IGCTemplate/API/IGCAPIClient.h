@@ -15,4 +15,15 @@ static NSString * const kIGCAPIContentTypeJSON = @"application/json";
 
 @interface IGCAPIClient : NSObject
 
+- (instancetype)initWithRootURL:(NSString *)rootURL authHeader:(NSString *)authHeader;
+- (void)cancelTasks;
+- (void)getRequestToLink:(NSString *)link
+             queryParams:(NSDictionary *)queryParams
+           authenticated:(BOOL)authenticated
+              completion:(void (^)(NSURLResponse *, NSDictionary *, NSError *))completion;
+- (void)postRequestToLink:(NSString *)link
+               bodyParams:(NSDictionary *)bodyParams
+            authenticated:(BOOL)authenticated
+               completion:(void (^)(NSURLResponse *, NSDictionary *, NSError *))completion;
+
 @end
